@@ -12,7 +12,7 @@ const Recipes = () => {
         if (res.ok) {
           return res.json();
         }
-        throw new Error("Network response was not OK");
+        throw new Error("Network response was not ok.");
       })
       .then((res) => setRecipes(res))
       .catch(() => navigate("/"));
@@ -35,11 +35,10 @@ const Recipes = () => {
       </div>
     </div>
   ));
-
   const noRecipe = (
     <div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
       <h4>
-        No recipes yet. Why not <Link to="/new_recipe">Create one</Link>
+        No recipes yet. Why not <Link to="/new_recipe">create one</Link>
       </h4>
     </div>
   );
@@ -50,9 +49,9 @@ const Recipes = () => {
         <div className="container py-5">
           <h1 className="display-4">Recipes for every occasion</h1>
           <p className="lead text-muted">
-            We've pulled together our most popular recipes, our lates additions,
-            and our editor's picks, so there's sure to be something tempting for
-            you to try.
+            We’ve pulled together our most popular recipes, our latest
+            additions, and our editor’s picks, so there’s sure to be something
+            tempting for you to try.
           </p>
         </div>
       </section>
