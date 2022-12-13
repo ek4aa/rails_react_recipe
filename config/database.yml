@@ -20,6 +20,9 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: sammy
+  password: <%= ENV["RAIL_REACT_RECIPE_DATABASE_PASSWORD"] %>
 
 development:
   <<: *default
